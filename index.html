@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cari Profil GitHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">CARI PROFILE GITHUB ORANG</h1>
+
+
+    <!-- Input -->
+    <form id="github-form">
+      <input type="text" id="username" class="input-field" placeholder="Masukkan Username GitHub" required>
+      <button type="submit" class="btn">Cari</button>
+    </form>
+
+    <!-- Loading -->
+    <div id="profile-container" class="hidden">
+      <div id="skeleton" class="skeleton hidden">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text short"></div>
+      </div>
+
+      <!-- Tampil Profil -->
+      <div id="profile" class="hidden profile-card">
+        <img id="avatar" alt="Foto Profil" class="avatar" />
+        <h2 id="name" class="profile-name"></h2>
+        <p id="bio" class="profile-bio"></p>
+        <p><strong>Repositori Publik:</strong> <span id="repos"></span></p>
+        <a id="profile-link" href="#" target="_blank" class="profile-link">Lihat Profil</a>
+      </div>
+    </div>
+
+    <p id="error" class="error hidden">Pengguna tidak ditemukan. Silakan coba lagi.</p>
+  </div>
+
+  <script src="bekend.js"></script>
+</body>
+</html>
